@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="androidjavaucam.p1android.TelaProgressoActivity"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#95b1c9">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="69dp">
+
+                <ImageView
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:id="@+id/imageView"
+                    android:src="@android:drawable/ic_menu_edit"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Bem Vindo ao Sistema de Estudo SIDED"
+                        android:id="@+id/textView"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="25dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Progresso das Aulas"
+                android:id="@+id/textView2"
+                android:textIsSelectable="false"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Aulas Dadas"
+                android:id="@+id/textView3"
+                android:textIsSelectable="false"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="22dp"
+                />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:progress="2250"
+                android:max="5000"
+                android:progressTintMode="screen"
+                android:layout_marginLeft="10dp"
+                android:theme="@android:style/Widget.ActionBar" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Exercícios Feitos"
+                android:id="@+id/textView4"
+                android:textIsSelectable="false"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="22dp"
+                />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar2"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:progress="2250"
+                android:max="5000"
+                android:progressTintMode="screen"
+                android:layout_marginLeft="10dp"
+                android:theme="@android:style/Widget.ActionBar" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Laboratórios enviados ao GitHub"
+                android:id="@+id/textView5"
+                android:textIsSelectable="false"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="22dp"
+                />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar3"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:progress="2250"
+                android:max="5000"
+                android:progressTintMode="screen"
+                android:layout_marginLeft="10dp"
+                android:theme="@android:style/Widget.ActionBar" />
+
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Voltar"
+                android:id="@+id/button5"
+                android:layout_weight="0"
+                android:textSize="20dp"
+                android:background="#d4d1d1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

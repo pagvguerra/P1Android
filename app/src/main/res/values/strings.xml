@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Trabalho da P1 de Android</string>
+
+    <string-array name="curso_array">
+        <item>Selecione o curso</item>
+        <item>Java</item>
+        <item>Sistemas Operacionais 1</item>
+        <item>Sistemas Operacionais 2</item>
+        <item>Android</item>
+        <item>Engenharia de Software</item>
+   </string-array>
+
+    <string-array name="curso2_array">
+        <item>Curso</item>
+        <item>Java</item>
+        <item>Sistemas Operacionais 1</item>
+        <item>Sistemas Operacionais 2</item>
+        <item>Android</item>
+        <item>Engenharia de Software</item>
+    </string-array>
+
+    <string-array name="aula_array">
+        <item>Selecione aula</item>
+        <item>Aula 1</item>
+        <item>Aula 2</item>
+        <item>Aula 3</item>
+        <item>Aula 4</item>
+        <item>Aula 5</item>
+    </string-array>
+
+    <string name="ExericioFeito">Exercicio Feito?</string>
+    <string name="LaboratorioEnviado">Laboratório Enviado?</string>
+</resources>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="androidjavaucam.p1android.TelaCadastroActivity"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#95b1c9">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="69dp">
+
+                <ImageView
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:id="@+id/imageView"
+                    android:src="@android:drawable/ic_menu_edit"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Bem Vindo ao Sistema de Estudo SIDED"
+                        android:id="@+id/textView"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="25dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Cadastro do Aluno"
+                android:id="@+id/textView2"
+                android:textIsSelectable="false"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView3"
+                android:textIsSelectable="false"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#8d0313" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText5"
+                android:hint="Nome"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText4"
+                android:layout_weight="0.80"
+                android:hint="Matrícula (Número)"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_weight="0.80"
+                android:hint="Email" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText6"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="Conta GitHub" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:entries="@array/curso2_array"
+                android:layout_marginTop="10dp"
+                android:popupTheme="@android:animator/fade_in"
+                android:spinnerMode="dialog"
+                android:stateListAnimator="@android:drawable/spinner_dropdown_background" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:id="@+id/button"
+                android:layout_weight="0"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="30dp"
+                android:background="#8baf9b"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Limpar"
+                android:id="@+id/button2"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0"
+                android:textSize="20dp"
+                android:background="#95b1c9"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Voltar"
+                android:id="@+id/button3"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0"
+                android:textSize="20dp"
+                android:background="#d4d1d1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

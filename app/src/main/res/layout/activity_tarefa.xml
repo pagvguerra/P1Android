@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="androidjavaucam.p1android.TelaTarefaActivity"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#95b1c9">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="69dp">
+
+                <ImageView
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:id="@+id/imageView"
+                    android:src="@android:drawable/ic_menu_edit"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Bem Vindo ao Sistema de Estudo SIDED"
+                        android:id="@+id/textView"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="25dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Selecione a Tarefa"
+                android:id="@+id/textView2"
+                android:textIsSelectable="false"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:entries="@array/curso_array"
+                android:layout_marginTop="20dp"
+                android:popupTheme="@android:animator/fade_in"
+                android:spinnerMode="dialog"
+                android:stateListAnimator="@android:drawable/spinner_dropdown_background" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner1"
+                android:entries="@array/aula_array"
+                android:layout_marginTop="20dp"
+                android:popupTheme="@android:animator/fade_in"
+                android:spinnerMode="dialog"
+                android:stateListAnimator="@android:drawable/spinner_dropdown_background" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Aula 1 - Introdução"
+                android:id="@+id/textView3"
+                android:textIsSelectable="false"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="22dp"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ExericioFeito"
+                android:textSize="20dp"
+                android:id="@+id/checkBox2" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/LaboratorioEnviado"
+                android:id="@+id/checkBox"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:progress="2250"
+                android:max="5000"
+                android:progressTintMode="screen"
+                android:layout_marginLeft="10dp"
+                android:theme="@android:style/Widget.ActionBar" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Progresso"
+                android:id="@+id/button3"
+                android:layout_weight="0"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#974e4e"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Cadastro"
+                android:id="@+id/button4"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0"
+                android:textSize="20dp"
+                android:background="#8baf9b"
+                android:layout_marginBottom="10dp"
+                android:textColor="#ffffff"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Sair"
+                android:id="@+id/button5"
+                android:layout_weight="0"
+                android:textSize="20dp"
+                android:background="#d4d1d1" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

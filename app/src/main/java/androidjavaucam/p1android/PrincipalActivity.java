@@ -1,6 +1,8 @@
 package androidjavaucam.p1android;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +20,12 @@ public class PrincipalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        final Context context = getApplicationContext();
+
+        //Criação e carregamento de dados iniciais
+        criaTabelaEExecutaCargaInicialDasTabelas(context);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
@@ -41,12 +49,18 @@ public class PrincipalActivity extends AppCompatActivity {
         botaoAcessar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validaCampos()) {
+                if (validaCampos(context)) {
                     startActivity(new Intent(PrincipalActivity.this, TelaTarefaActivity.class));
                 }
             }
         });
 
+    }
+
+    private void criaTabelaEExecutaCargaInicialDasTabelas(Context context) {
+        ConexaoSQLite connection = new ConexaoSQLite(context);
+        CarregaDadosBaseSQLite carregaBaseSQLite = new CarregaDadosBaseSQLite();
+        carregaBaseSQLite.criaTabelas(connection.getWritableDatabase());
     }
 
     private void limparCamposAction() {
@@ -55,7 +69,7 @@ public class PrincipalActivity extends AppCompatActivity {
         mensagemRetorno.setText(null);
     }
 
-    private boolean validaCampos() {
+    private boolean validaCampos(Context context) {
         String emailUsuarioString = emailUsuario.getText().toString();
         String passwordUsuarioString = passwordUsuario.getText().toString();
 
@@ -64,7 +78,7 @@ public class PrincipalActivity extends AppCompatActivity {
             return false;
         }
 
-        if(!new EmailValidator().validate(emailUsuarioString)){
+        if (!new EmailValidator().validate(emailUsuarioString)) {
             mensagemRetorno.setText("O Email digitado é inválido");
             return false;
         }
@@ -74,7 +88,22 @@ public class PrincipalActivity extends AppCompatActivity {
             return false;
         }
 
-        return true;
+        Usuario usuario = new Usuario();
+        usuario.setEmail(emailUsuarioString);
+        usuario.setSenha(passwordUsuarioString);
+        usuario = new UsuarioDAO().autenticarUsuario(usuario, context);
+
+        if (usuario.getId() != 0) {
+            SharedPreferences pref = getSharedPreferences("CONFIGURACOES", MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putString("email", usuario.getEmail());
+            editor.putInt("idUsuario", usuario.getId());
+            editor.commit();
+            return true;
+        } else {
+            mensagemRetorno.setText("Dados de Login não conferem");
+            return false;
+        }
     }
 
 }

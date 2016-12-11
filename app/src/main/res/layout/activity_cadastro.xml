@@ -80,7 +80,15 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/editText5"
                 android:hint="Nome"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="5dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText20"
+                android:inputType="textPassword"
+                android:hint="Senha"
+                android:layout_marginBottom="5dp" />
         </LinearLayout>
 
 
@@ -98,7 +106,7 @@
                 android:id="@+id/editText4"
                 android:layout_weight="0.80"
                 android:hint="Matrícula (Número)"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="5dp" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -122,15 +130,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/editText6"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:hint="Conta GitHub" />
 
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinner"
-                android:entries="@array/curso2_array"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:popupTheme="@android:animator/fade_in"
                 android:spinnerMode="dialog"
                 android:stateListAnimator="@android:drawable/spinner_dropdown_background" />
@@ -152,17 +159,6 @@
                 android:textColor="#ffffff"
                 android:layout_marginTop="30dp"
                 android:background="#8baf9b"
-                android:layout_marginBottom="10dp" />
-
-            <Button
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Limpar"
-                android:id="@+id/button2"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0"
-                android:textSize="20dp"
-                android:background="#95b1c9"
                 android:layout_marginBottom="10dp" />
 
             <Button

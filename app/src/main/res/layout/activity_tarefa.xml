@@ -75,7 +75,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinner"
-                android:entries="@array/curso_array"
                 android:layout_marginTop="20dp"
                 android:popupTheme="@android:animator/fade_in"
                 android:spinnerMode="dialog"
@@ -92,7 +91,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinner1"
-                android:entries="@array/aula_array"
                 android:layout_marginTop="20dp"
                 android:popupTheme="@android:animator/fade_in"
                 android:spinnerMode="dialog"
@@ -138,13 +136,23 @@
                 android:layout_width="392dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/progressBar"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:progress="2250"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:max="5000"
                 android:progressTintMode="screen"
                 android:layout_marginLeft="10dp"
                 android:theme="@android:style/Widget.ActionBar" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Para gravar a tarefa clique em Progresso"
+                android:id="@+id/textView322"
+                android:textIsSelectable="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="12dp"
+                />
 
             <Button
                 android:layout_width="fill_parent"
